@@ -19,14 +19,21 @@
       a{
           color: #0077aa;
           font-weight: bold;
+          text-decoration: none;
       }
       .created{
+          padding-left: 20px;
           color: #0077aa;
+      }
+      .copy{
+          color: #1650aa;
+          padding: 3px;
       }
   </style>
 	<template>
-        <div>
-            <span class="copyright">GMC<span class="created">@</span>COPYRIGHT 2015</span> <span class="created">Created By </span><a href="http://suhtech.tk">SUHTECH</a>.
+        <div class="layout horizontal">
+            <span class="flex"></span>
+            <span class="copyright">GMC<span class="copy">&copy;</span>COPYRIGHT 2015</span> <span class="created">Created By </span><a class="flex" href="http://suhtech.tk">SUHTECH</a>.
         </div>
 	</template>
 	<script>

@@ -52,7 +52,9 @@ foreach($setValues as $key)
 }
 
 
-if(DB::insert("INSERT INTO Student VALUES (NULL ,?,?,?,?,?,?,?,?)",$dbValues))
+if(DB::insert(
+    "INSERT INTO `student` (`student_name`, `father_name`, `roll_no`, `semester`, `department`, `total_fee`, `session_from`, `session_to`) VALUES (?,?,?,?,?,?,?,?)",$dbValues)
+)
 {
     $res->setSuccess(true)->echo_json();
 }

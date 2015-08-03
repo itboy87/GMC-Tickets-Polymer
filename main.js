@@ -42,11 +42,11 @@ function assignJsonData(data,property){
         tp[property] = [];
         if(data === false)
         {
-            RecordError(property,"Error retrieving records from database!")
+            RecordTicketError("Error retrieving records from database!")
         }
         else
         {
-            RecordError(property,"No Record Found!")
+            RecordTicketError("No Record Found!")
         }
 
     }else{
@@ -104,7 +104,7 @@ function showNotification(value)
     };
 }
 
-function RecordError($error)
+function RecordTicketError($error)
 {
     var $element = '.tickets_record';
 

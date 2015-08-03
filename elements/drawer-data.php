@@ -32,8 +32,8 @@
             <img src="../images/logo.png">
         </section>
         <section>
-            <paper-input id="nameInput" value="{{studentName}}" label="Student Name" error-message="letters only!" pattern="[a-zA-Z]*" auto-validate floatinglabel></paper-input>
-            <paper-input id="father_nameInput" value="{{fatherName}}" label="Father Name" error-message="letters only!" pattern="[a-zA-Z]*" auto-validate floatinglabel></paper-input>
+            <paper-input id="nameInput" value="{{studentName}}" label="Student Name" error-message="letters only!" pattern="[a-zA-Z ]*" auto-validate floatinglabel></paper-input>
+            <paper-input id="father_nameInput" value="{{fatherName}}" label="Father Name" error-message="letters only!" pattern="[a-zA-Z ]*" auto-validate floatinglabel></paper-input>
             <paper-input value="{{semester}}" type="number" min="1" label="Semester" error-message="numbers only!" auto-validate floatinglabel></paper-input>
             <paper-input value="{{rollNo}}" type="number" min="1" label="Roll No" error-message="numbers only!" auto-validate floatinglabel></paper-input>
             <paper-input value="{{department}}" label="Department" floatinglabel></paper-input>

@@ -25,7 +25,7 @@
 	<template>
 		<div class="flex">
             <content></content>
-            <paper-icon-button icon="refresh"></paper-icon-button>
+            <paper-icon-button onclick="refresh()" icon="refresh"></paper-icon-button>
     </div>
 
     <div id="header-text" class="vertical layout flex center-justified" style="text-align:center;">

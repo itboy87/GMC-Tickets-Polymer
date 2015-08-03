@@ -85,9 +85,9 @@
                 //$data = $("#ticket_form").serialize();
                 //console.log("Data: ",$data);
 
-                console.log(this,e);
+                //console.log(this,e);
                 if(e.detail && e.detail.success == true){
-                    //refresh();
+                    refresh();
                     alert("Ticket Submited Successfully!");
                     this.reset();
                 }else{
@@ -136,7 +136,7 @@
                     form.fine.value=fine;
                 }else{
                     form.fine.value = 0;
-                    console.log(e.currentTarget.value);
+                    //console.log(e.currentTarget.value);
                     setFieldError(form.code,"Values must 1-24 and seperate multiple values with ','");
                 }
 			},

@@ -10,11 +10,11 @@
     <paper-drawer-panel id="paperDrawerPanel">
         <paper-header-panel drawer>
             <drawer-data
-                student-name="{{}}"
-                father-name="{{}}"
-                semester="{{}}"
-                roll-no="{{}}"
-                department="{{}}">
+                student-name="{{studentname}}"
+                father-name="{{fathername}}"
+                semester="{{semester}}"
+                roll-no="{{rollno}}"
+                department="{{department}}">
 
             </drawer-data>
         </paper-header-panel>
@@ -28,14 +28,18 @@
                 <section class="main-content flex">
                     <ticket-list
                         data="{{ticketsdata}}"
-                        student-name="{{}}"
-                        father-name="{{}}"
-                        semester="{{}}"
-                        roll-no="{{}}"
-                        department="{{}}"></ticket-list>
+                        student-name="{{studentname}}"
+                        father-name="{{fathername}}"
+                        semester="{{semester}}"
+                        roll-no="{{rollno}}"
+                        department="{{department}}">
+
+                    </ticket-list>
 
                 </section>
-                <page-footer></page-footer>
+                <div>
+                    <page-footer></page-footer>
+                </div>
             </div>
             </iron-pages>
         </paper-header-panel>

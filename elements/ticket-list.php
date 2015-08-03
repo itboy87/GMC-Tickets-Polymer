@@ -10,7 +10,7 @@
 
 <link rel="import" href="../bower_components/iron-list/iron-list.html">
 <link rel="import" href="../bower_components/paper-material/paper-material.html">
-
+<link rel="import" href="ticket-card.php">
 <dom-module id="ticket-list">
     <style>
         :host{
@@ -18,20 +18,18 @@
         @apply(--layout-fit);
         @apply(--layout-vertical);
         }
-        .card{
-            min-width: 250px;
-            border:1px solid #d8d8d8;
-            margin: 7px;
-            margin-bottom: 10px;
-            display: block;
-            background-color:#FFFFFF;
-        }
         paper-material{
             padding: 15px;
         }
         #clients_list{
         @apply(--layout-flex);
 
+        }
+        ticket-card{
+            max-width: 525px;
+            min-width: 310px;
+            display: inline-block;
+            float: left;
         }
 
     </style>
@@ -42,15 +40,15 @@
 
             </paper-material>
         </template>
--->        <iron-list id="clients_list" items="{{data}}" indexAs="{{index}}">
-            <template>
-                <paper-material elevation="2" class="card">
-                    <section class="student-roll-no">
-                        {{item.roll_no}}
-                    </section>
-                </paper-material>
+
+-->
+        <template is="dom-if" if="{{listFilteredData.length}}">
+            <iron-list id="clients_list" items="{{listFilteredData}}" indexAs="{{index}}">
+                <template>
+                    <ticket-card data="{{item}}"></ticket-card>
+                </template>
+            </iron-list>
             </template>
-        </iron-list>
         <!--
         <template is="dom-if" if="{{data.length}}">
             <iron-list items="{{data}}">
@@ -64,9 +62,11 @@
             </iron-list>
         </template>-->
 
-        <!--<template is="dom-if" if="{{!data.length}}">
-            <div class="norecord tickets_record">No Record Found!</div>
-        </template>-->
+        <template is="dom-if" if="{{!listFilteredData.length}}">
+            <paper-material elevation="2">
+                <div class="norecord tickets_record">No Record Found!</div>
+            </paper-material>
+        </template>
     </template>
 
 </dom-module>
@@ -98,44 +98,56 @@
             department:{
                 type:String,
                 notify:true
+            },
+            listFilteredData:{
+                value:function(){return [];},
+                computed:'listFilter(data,studentName,fatherName,department,rollNo,semester)'
             }
         },
         dataChanged: function (newData,oldData) {
-            console.log("new data: ",newData);
+            //console.log("new data: ",newData);
         },
         listFilter:function(items,studentName,fatherName,department,rollNo,semester){
-            /*
-            var checkId = true;
+            var checkRollNo = true;
             if(items.length <1)
                 return [];
 
-            if (name.length < 1 && id < 1 && location.length < 1 ) {return items;}
+            if (studentName.length < 1 && rollNo < 1 && department.length < 1
+                && fatherName.length < 1 && semester < 1) {return items;}
 
-            id = parseInt(id);
-            if(isNaN(id)){
-                checkId = false;
+            rollNo = parseInt(rollNo);
+            if(isNaN(rollNo)){
+                checkRollNo = false;
+            }
+            var checkSemester = true;
+            semester = parseInt(semester);
+            if(isNaN(semester)){
+                checkSemester = false;
             }
 
             var filtered = [];
-            var nameMatch = new RegExp(name, 'i');
-            var locationMatch = new RegExp(location, 'i');
+            var studentNameMatch = new RegExp(studentName, 'i');
+            var fatherNameMatch = new RegExp(fatherName, 'i');
+            var departmentMatch = new RegExp(department, 'i');
+            //var semesterMatch = new RegExp(semester);
+
             for (var i = 0; i < items.length; i++) {
                 var item = items[i];
-                if (locationMatch.test(item.address1+', '+item.city) && nameMatch.test(item.full_name)) {
-                    if (!checkId) {
+                if (departmentMatch.test(item["department"]) && studentNameMatch.test(item.student_name)
+                    && fatherNameMatch.test(item.father_name)) {
+                    if(checkSemester && semester != item["semester"])
+                        continue;
+                    if (!checkRollNo) {
                         filtered.push(item);
                     }else{
-                        if (id==item.department_id) {
+                        if (rollNo==item.roll_no) {
                             filtered.push(item);
                             break;
-                        };
-                    };
-
+                        }
+                    }
                 }
             }
-            console.log("Filtered Value: ",filtered);
             return filtered;
-            */
         }
     });
 </script>

@@ -1,0 +1,93 @@
+:host{
+  display: block;
+}
+/*.ticket-wrap {
+
+  overflow: hidden;
+  margin: auto;
+  background: #fff;
+  border-radius: .3em;
+}*/
+
+.main{
+    margin-top: 3px;
+    background-color: white;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.main .roll-no {
+    font-size: 1.5em;
+    color: #00FFFF;
+}
+
+.info .ticket-code {
+    color: yellowgreen;
+    font-size: 1.53em;
+    font-family: "Coda", sans-serif;
+    font-weight: bold;
+    padding-bottom:7px;
+}
+.info  .student-name {
+    font-weight: bold;
+  color: #e76043; 
+  font-size: 1.5em;
+  font-family: "varela round", sans-serif;
+}
+
+.info  .info-value {
+    font-weight: 100;
+    font-size: 1.3em;
+    color: #7FFFD4;
+}
+.officer-name{
+    color: rgba(110, 124, 93, 0.78);
+    font-size: .99em;
+}
+.info .department {
+  margin-top: 5px;
+  color: #c0c5c5;
+    font-size: 1.5em;
+
+}
+.department span{
+    color: blueviolet;
+    font-size: 1.1em;
+}
+.norecord{
+  padding: 1em;
+  text-align: center;
+  margin: auto;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+  color: red;
+  font-size: 22px;
+}
+
+img:hover,span:hover,.username:hover{
+  cursor: pointer;
+}
+
+
+.info{
+    min-width: 95px;
+    display: inline-block;
+    padding:8px;
+}
+.info div{
+    padding: 5px;
+}
+iron-icon{
+    color: rgba(106, 82, 67, 0.63);
+    height: 1.5em;
+    width: 1.5em;
+    position: relative;
+    top: -2px;
+    padding-right: 5px;
+}
+
+.info .label{
+    color: #1b5e20;
+    font-weight: bold;
+    font-size: 1em;
+}

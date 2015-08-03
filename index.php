@@ -2,11 +2,16 @@
 <?php
 session_start();
 $pageTitle = "GMC - Registration Ticket";
+$response = "Welcome To GMC Tickets Registration System!";
     $isUserLoggedIn = false;
 
     if(isset($_SESSION['email']) && isset($_SESSION['user_id']))
     {
         $isUserLoggedIn = true;
+    }
+    else
+    {
+        $response = "Authenticate Your Identity!";
     }
 ?>
 
@@ -23,6 +28,8 @@ $pageTitle = "GMC - Registration Ticket";
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
 
+    <link rel="import" href="elements/response-toast.php">
+
     <?
         if($isUserLoggedIn) {
             //User Logged In
@@ -36,8 +43,9 @@ $pageTitle = "GMC - Registration Ticket";
 
             ?>
             <link rel="import" href="elements/login-page.html">
-
             <link rel="import" href="elements/gmc-logo.php">
+
+            <script src="login.js"></script>
 
             <?
         }
@@ -45,6 +53,12 @@ $pageTitle = "GMC - Registration Ticket";
 </head>
 
 <body unresolved class="fullbleed">
+<?php
+if(isset($_REQUEST["res"])) {
+    $response = $_REQUEST["res"];
+}
+
+?>
 
 <?php
 if($isUserLoggedIn)
@@ -60,5 +74,6 @@ else
     <?php
 }
 ?>
+<response-toast id="response" response="<?php echo $response; ?>" style="z-index: 4000;"></response-toast>
 </body>
 </html>

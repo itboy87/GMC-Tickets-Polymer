@@ -73,8 +73,8 @@ gmc-logo{
 
 .main-content{
 }
-footer{
-    height: 50px;
+page-footer{
+    padding: 20px;
     background-color: #00c853;
 }
 

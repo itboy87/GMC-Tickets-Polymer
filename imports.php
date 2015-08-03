@@ -24,6 +24,7 @@
 <link rel="import" href="elements/header-toolbar.php">
 <link rel="import" href="elements/add-ticket.php">
 <link rel="import" href="elements/ticket-list.php">
+<link rel="import" href="elements/page-footer.php">
 
 
 <script src="main.js"></script>

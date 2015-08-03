@@ -84,12 +84,11 @@ function getTickets(){
     req.open("GET",url,true);
     req.send();
 }
-/*
+
 window.onload = function () {
-    correctProfilePages();
     showNotification();
 }
-*/
+
 
 function showNotification(value)
 {

@@ -45,7 +45,9 @@
 -->        <iron-list id="clients_list" items="{{data}}" indexAs="{{index}}">
             <template>
                 <paper-material elevation="2" class="card">
-                    <span>{{item.student_name}}</span>
+                    <section class="student-roll-no">
+                        {{item.roll_no}}
+                    </section>
                 </paper-material>
             </template>
         </iron-list>

@@ -35,9 +35,7 @@
                         department="{{}}"></ticket-list>
 
                 </section>
-                <footer>
-                    footer
-                </footer>
+                <page-footer></page-footer>
             </div>
             </iron-pages>
         </paper-header-panel>
@@ -48,15 +46,5 @@
     <!-- Dialogs End -->
 
     <paper-fab icon="receipt" id="floating_ticket" onclick="{{add_ticket}}" title="Add Client" class="floating_button float_1" tabindex="0"></paper-fab>
-
-    <?php
-    $response = "";
-    if(isset($_REQUEST["res"])) {
-        $response = $_REQUEST["res"];
-    }
-
-    ?>
-
-<response-toast id="response" response="<?php echo $response; ?>"></response-toast>
 
 </template>

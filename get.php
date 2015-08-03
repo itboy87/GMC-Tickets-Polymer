@@ -20,8 +20,8 @@ $setValues = array(
     "semester",
     "department",
     "total_fee",
-    "session_from",
-    "session_to"
+    /*"session_from",
+    "session_to"*/
 );
 $notEmptyValues = array(
     "student_name",

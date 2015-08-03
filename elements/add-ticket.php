@@ -45,14 +45,14 @@
                         <paper-input style="position: relative;bottom: -6px;" type="number" label="Total Fee" name="total_fee" min="0" error-message="numbers only!" floatinglabel required></paper-input>
                     </td>
                 </tr>
-                <tr>
+<!--                <tr>
                     <td>
                         <paper-input type="date" name="session_from" id="session_from" placeholder="Session From"></paper-input>
                     </td>
                     <td>
                         <paper-input type="date" name="session_to" id="session_to" placeholder="Session To"></paper-input>
                     </td>
-                </tr>
+                </tr>-->
             </table>
             <datalist>
 

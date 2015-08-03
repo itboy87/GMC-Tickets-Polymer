@@ -6,7 +6,10 @@
  * Time: 10:45 PM
  */
 ?>
+
+
 <template is="dom-bind" id="tpl">
+    <span id="body_wrap">
     <paper-drawer-panel id="paperDrawerPanel">
         <paper-header-panel drawer>
             <drawer-data
@@ -44,11 +47,15 @@
             </iron-pages>
         </paper-header-panel>
     </paper-drawer-panel>
-
+    </span>
     <!-- Dialogs -->
     <add-ticket id="ticketdialog"></add-ticket>
+
     <!-- Dialogs End -->
 
     <paper-fab icon="receipt" id="floating_ticket" onclick="{{add_ticket}}" title="Add Client" class="floating_button float_1" tabindex="0"></paper-fab>
 
 </template>
+
+<print-ticket id="printTicket"></print-ticket>
+

@@ -21,7 +21,7 @@
                     <!--<div class="ticket-code">{{data.code}}</div>
                     <div style="color: #658585; font-size: small;"><iron-icon icon="event"></iron-icon>{{computeDate(data.date)}}</div>-->
                     <div class="department capitalize">
-                        <iron-icon icon="room"></iron-icon>
+                        <iron-icon icon="home"></iron-icon>
                         <span>{{data.department}}</span>
                     </div>
                 </section>
@@ -70,10 +70,12 @@
                 }
             },
             print: function () {
-                alert("print: "+this.studentid);
-                var mywindow = window.open('', 'my div', 'height=400,width=600');
+                var printTicket = _$("printTicket");
+                printTicket.print(this.data);
+
+                /*var mywindow = window.open('', 'my div', 'height=400,width=600');
                 mywindow.document.write('<html><head><title>my div</title>');
-                /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+                /!*optional stylesheet*!/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
                 mywindow.document.write('</head><body >');
                 mywindow.document.write(data);
                 mywindow.document.write('</body></html>');
@@ -82,7 +84,7 @@
                 mywindow.focus(); // necessary for IE >= 10
 
                 mywindow.print();
-                mywindow.close();
+                mywindow.close();*/
 
                 return true;
             }

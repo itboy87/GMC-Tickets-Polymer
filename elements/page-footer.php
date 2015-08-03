@@ -33,7 +33,8 @@
 	<template>
         <div class="layout horizontal">
             <span class="flex"></span>
-            <span class="copyright">GMC<span class="copy">&copy;</span>COPYRIGHT 2015</span> <span class="created">Created By </span><a class="flex" href="http://suhtech.tk">SUHTECH</a>.
+            <span class="copyright">GMC<span class="copy">&copy;</span>COPYRIGHT 2015</span>
+            <span class="created">Created By </span><a class="flex" href="http://suhtech.tk">Sabeeh & Arslan</a>.
         </div>
 	</template>
 	<script>

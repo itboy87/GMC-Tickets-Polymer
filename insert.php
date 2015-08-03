@@ -20,8 +20,8 @@ $setValues = array(
     "semester",
     "department",
     "total_fee",
-    "session_from",
-    "session_to"
+/*    "session_from",
+    "session_to"*/
 );
 $notEmptyValues = array(
     "student_name",
@@ -53,7 +53,7 @@ foreach($setValues as $key)
 
 
 if(DB::insert(
-    "INSERT INTO `student` (`student_name`, `father_name`, `roll_no`, `semester`, `department`, `total_fee`, `session_from`, `session_to`) VALUES (?,?,?,?,?,?,?,?)",$dbValues)
+    "INSERT INTO `student` (`student_name`, `father_name`, `roll_no`, `semester`, `department`, `total_fee`) VALUES (?,?,?,?,?,?)",$dbValues)
 )
 {
     $res->setSuccess(true)->echo_json();

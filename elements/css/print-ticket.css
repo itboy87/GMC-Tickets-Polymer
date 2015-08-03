@@ -1,0 +1,61 @@
+.bank-text{
+    display: inline-block;
+    padding-top: 8px;
+    font-size: large;
+}
+
+/*
+paper-icon-button [icon="clear"]{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+*/
+
+:host{
+    background-color: white;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.center{
+    text-align:center;
+}
+table{
+
+}
+td{
+    padding: 5px;
+    width:170px;
+}
+.signature{
+    margin-top:10px;
+    font-weight:bold;
+}
+.bop-logo, .gmc-logo{
+    padding: 0 5px;
+}
+.bop-logo{
+    padding-top: 2px;
+    float: left;
+}
+.gmc-logo{
+    float: right;
+}
+
+.value{
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.table-wrap{
+    width: 300px;
+    display: inline-block;
+}

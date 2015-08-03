@@ -18,7 +18,7 @@
 
 .main .roll-no {
     font-size: 1.5em;
-    color: #00FFFF;
+    color: #2D3A35;
 }
 
 .info .ticket-code {
@@ -38,7 +38,7 @@
 .info  .info-value {
     font-weight: 100;
     font-size: 1.3em;
-    color: #7FFFD4;
+    color: #2D3A35;
 }
 .officer-name{
     color: rgba(110, 124, 93, 0.78);

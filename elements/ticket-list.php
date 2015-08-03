@@ -45,22 +45,11 @@
         <template is="dom-if" if="{{listFilteredData.length}}">
             <iron-list id="clients_list" items="{{listFilteredData}}" indexAs="{{index}}">
                 <template>
-                    <ticket-card data="{{item}}"></ticket-card>
+                    <ticket-card data="{{item}}" studentid ="{{item.student_id}}"></ticket-card>
                 </template>
             </iron-list>
             </template>
-        <!--
-        <template is="dom-if" if="{{data.length}}">
-            <iron-list items="{{data}}">
-                <template>
-                    <paper-material elevation="2">
-                        <div>
-                            {{item.student_name}}
-                        </div>
-                    </paper-material>
-                </template>
-            </iron-list>
-        </template>-->
+
 
         <template is="dom-if" if="{{!listFilteredData.length}}">
             <paper-material elevation="2">

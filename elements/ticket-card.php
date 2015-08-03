@@ -8,6 +8,7 @@
     <template>
         <div class="ticket-wrap">
             <paper-material elevation="2" class="main layout horizontal">
+                <paper-icon-button icon="print" on-tap="print" style="color:#00acc1"></paper-icon-button>
                 <section class="info flex">
                     <div class="roll-no">
                         <iron-icon icon="label"></iron-icon>
@@ -52,6 +53,9 @@
                 },
                 showdata: {
                     value: false
+                },
+                studentid:{
+                    value:0
                 }
             },
             dataChanged: function (newData, oldData) {
@@ -64,6 +68,23 @@
                 } else {
                     return '<i style="background-color: red;">NULL</i>';
                 }
+            },
+            print: function () {
+                alert("print: "+this.studentid);
+                var mywindow = window.open('', 'my div', 'height=400,width=600');
+                mywindow.document.write('<html><head><title>my div</title>');
+                /*optional stylesheet*/ //mywindow.document.write('<link rel="stylesheet" href="main.css" type="text/css" />');
+                mywindow.document.write('</head><body >');
+                mywindow.document.write(data);
+                mywindow.document.write('</body></html>');
+
+                mywindow.document.close(); // necessary for IE >= 10
+                mywindow.focus(); // necessary for IE >= 10
+
+                mywindow.print();
+                mywindow.close();
+
+                return true;
             }
         });
     </script>

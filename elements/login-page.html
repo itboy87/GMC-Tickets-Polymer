@@ -1,0 +1,32 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<link rel="import" href="/bower_components/paper-input/paper-input.html">
+
+
+
+<dom-module id="login-page">
+    <link rel="import" type="css" href="../css/login-page.css">
+	<template>
+
+		<div id="login">
+			<h1>GMC Admin</h1>
+			<form method="post" action="../login.php">
+    			<input type="email" placeholder="Email" name="email" required/>
+    			<input type="password" placeholder="Password" name="pass" required/>
+    			<input type="submit" value="Log in" />
+  			</form>
+  			<!--
+			<paper-input id="uname" label="Username" error-message="Only Letters And Numbers Are Allowed" pattern="[a-zA-Z0-9]*" auto-validate required floatinglabel></paper-input>
+		</div>
+		<div>
+			<paper-input label="Password" type="password" required floatinglabel></paper-input>
+			-->
+		</div>
+
+	</template>
+	<script>
+		Polymer({
+			is:"login-page"
+		});
+	</script>
+</dom-module>

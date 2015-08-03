@@ -1,0 +1,68 @@
+
+:host{
+	display: block;
+}
+.top-bar{
+	padding: 10px;
+	background-color: #3286C1;
+	margin-top: 0;
+}
+#ticket_dialog h2{
+	padding: 0px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	position: relative;
+	left: -35px;
+}
+#ticket_dialog{
+	overflow-y: auto;
+    overflow-x: hidden;
+	padding:0;
+	border-radius: 5px;
+	background-color: white;
+}
+#ticket_form select, #ticket_form input{
+	margin: 5px;
+	width: 226px;
+	color: white;
+	padding: 10px;
+	border:none;
+	border-radius: 3px;
+	border:1px solid transparent;
+}
+#ticket_form .fix-input {
+	width: 232px;
+	padding: 7px;
+}
+#ticket_form .fix-select {
+	width: 247px;
+	padding: 9px;
+}
+#ticket_form select:focus, #ticket_form input:focus{
+	color: #3286C1;
+	background-color: white;
+	border-color:skyblue;
+}
+
+#ticket_dialog #form_footer{
+	overflow: hidden;
+	padding: 15px;
+	background-color: #E6CBCB;
+	margin: 0;
+}
+#ticket_form {
+	margin-bottom: 5px;
+}
+
+#ticket_dialog #ticket_addbtn{
+
+	background-color: #3286C1;
+}
+#ticket_dialog #resetbtn{
+
+	background-color: red;
+}
+#ticket_dialog paper-button{
+	width: 150px;
+}

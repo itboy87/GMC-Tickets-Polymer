@@ -1,0 +1,18 @@
+{
+  "name": "STS9-MOD",
+  "description": "",
+  "homepage": "",
+  "keywords": [],
+  "author": "",
+  "private": true,
+  "dependencies": {
+    "polymer": "polymer/polymer#master",
+    "iron-elements": "polymerelements/iron-elements#master",
+    "paper-elements": "polymerelements/paper-elements#master",
+    "gold-elements": "polymerelements/gold-elements#master",
+    "neon-animation": "polymerelements/neon-animation#master",
+    "app-layout-templates": "polymerelements/app-layout-templates#master",
+    "google-web-components": "GoogleWebComponents/google-web-components#master",
+    "iron-form": "PolymerElements/iron-form#master"
+  }
+}

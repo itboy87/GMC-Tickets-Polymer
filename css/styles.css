@@ -1,0 +1,89 @@
+body{
+  font-family: 'Lato','Open Sans', sans-serif;
+  background-color: #E9EAED;
+  font-size:13px;
+}
+
+#paperDrawerPanel [drawer] {
+
+  }
+paper-header-panel{
+    height: 100%;
+  }
+#paperDrawerPanel paper-toolbar{
+    box-sizing: border-box;
+    height: 82px;
+    padding: 10px 0;
+    background-color: #BB3360;
+  }
+
+#floating_ticket{
+    background-color: red;
+}
+
+.floating_button{
+    position: fixed;
+    bottom: 15px;
+    width: 60px;
+    height: 60px;
+}
+paper-dialog{
+    z-index: 2000 !important;
+}
+paper-fab{
+    z-index: 2500 !important;
+}
+.float_1{
+    right: 15px;
+}
+.float_2{
+    right: 85px;
+}
+.float_3{
+    right: 155px;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+
+login-page{
+    width: 450px;
+    height: 308px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+}
+
+gmc-logo{
+    width:486px ;
+    height: 91px;
+    background-color: #3399CC;
+    padding: 10px;
+    margin: 10px auto 0 auto;
+}
+
+.content-wrapper{
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+}
+
+.main-content{
+}
+footer{
+    height: 50px;
+    background-color: #00c853;
+}
+
+.norecord{
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+    font-family: "Coda", sans-serif;
+    font-weight: bold;
+    color: red;
+    font-size: 22px;
+}

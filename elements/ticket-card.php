@@ -6,39 +6,42 @@
 <dom-module id="ticket-card">
     <link rel="import" type="css" href="css/ticket-card.css">
     <template>
-        <div class="ticket-wrap">
-            <paper-material elevation="2" class="main layout horizontal">
-                <paper-icon-button icon="print" on-tap="print" style="color:#00acc1"></paper-icon-button>
-                <section class="info flex">
-                    <div class="roll-no">
-                        <iron-icon icon="label"></iron-icon>
-                        <span style="color: #006064; padding-right: 5px">#</span><span>{{data.roll_no}}</span>
-                    </div>
-                    <div class="student-name capitalize">
-                        <iron-icon icon="face"></iron-icon>
-                        <span>{{data.student_name}}</span>
-                    </div>
-                    <!--<div class="ticket-code">{{data.code}}</div>
-                    <div style="color: #658585; font-size: small;"><iron-icon icon="event"></iron-icon>{{computeDate(data.date)}}</div>-->
-                    <div class="department capitalize">
-                        <iron-icon icon="home"></iron-icon>
-                        <span>{{data.department}}</span>
-                    </div>
-                </section>
-                <section class="info">
-                    <div>
-                        <span class="father-name capitalize"><span class="label">Father: </span><span class="info-value">{{data.father_name}}</span></span>
-                    </div>
-                    <div>
-                        <span class="label">Semester: </span><span class="info-value">{{data.semester}}</span>
-                    </div>
-                    <div>
-                        <span class="label">Total Fee: </span>
-                        <span class="info-value">{{data.total_fee}}</span>
-                    </div>
-                </section>
+
+            <paper-material elevation="2" class="main layout vertical">
+                <div>
+                    <paper-icon-button icon="print" on-tap="print" class="print"></paper-icon-button>
+                </div>
+                <div class="layout horizontal">
+                    <section class="info flex">
+                        <div class="roll-no main-value">
+                            <iron-icon icon="label"></iron-icon>
+                            <span style="color: #006064; padding-right: 5px">#</span><span>{{data.roll_no}}</span>
+                        </div>
+                        <div class="student-name capitalize main-value">
+                            <iron-icon icon="face"></iron-icon>
+                            <span>{{data.student_name}}</span>
+                        </div>
+                        <!--<div class="ticket-code">{{data.code}}</div>
+                        <div style="color: #658585; font-size: small;"><iron-icon icon="event"></iron-icon>{{computeDate(data.date)}}</div>-->
+                        <div class="department capitalize main-value">
+                            <iron-icon icon="home"></iron-icon>
+                            <span>{{data.department}}</span>
+                        </div>
+                    </section>
+                    <section class="info info-right">
+                        <div class="main-value">
+                            <span class="father-name capitalize"><span class="label">Father: </span><span class="info-value">{{data.father_name}}</span></span>
+                        </div>
+                        <div class="main-value">
+                            <span class="label">Semester: </span><span class="info-value">{{data.semester}}</span>
+                        </div>
+                        <div class="main-value">
+                            <span class="label">Total Fee: </span>
+                            <span class="info-value">{{data.total_fee}}</span>
+                        </div>
+                    </section>
+                </div>
             </paper-material>
-        </div>
 
     </template>
     <script>

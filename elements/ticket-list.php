@@ -15,20 +15,26 @@
     <style>
         :host{
             display: block;
-        @apply(--layout-fit);
-        @apply(--layout-vertical);
+
         }
         paper-material{
             padding: 15px;
         }
         #clients_list{
-        @apply(--layout-flex);
+            position: absolute;
+            top:0;
+            left:5px;
+            right:0;
+            bottom: 55px;
 
         }
         ticket-card{
-            max-width: 525px;
-            min-width: 310px;
-            display: inline-block;
+            margin: 5px auto;
+            max-width: 500px;
+            min-width: 400px;
+            position: static !important;
+            transform: none !important;
+            display: inline-block !important;
             float: left;
         }
 

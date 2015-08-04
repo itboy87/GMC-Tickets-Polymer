@@ -40,7 +40,7 @@
                     </ticket-list>
 
                 </section>
-                <div>
+                <div class="footer">
                     <page-footer></page-footer>
                 </div>
             </div>

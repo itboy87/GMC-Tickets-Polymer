@@ -1,13 +1,6 @@
 :host{
   display: block;
 }
-/*.ticket-wrap {
-
-  overflow: hidden;
-  margin: auto;
-  background: #fff;
-  border-radius: .3em;
-}*/
 
 .main{
     margin-top: 3px;
@@ -17,7 +10,8 @@
 }
 
 .main .roll-no {
-    font-size: 1.5em;
+    width: 150px;
+    font-size: 1.1em;
     color: #2D3A35;
 }
 
@@ -31,13 +25,13 @@
 .info  .student-name {
     font-weight: bold;
   color: #e76043; 
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: "varela round", sans-serif;
 }
 
 .info  .info-value {
     font-weight: 100;
-    font-size: 1.3em;
+    font-size: 0.87em;
     color: #2D3A35;
 }
 .officer-name{
@@ -45,14 +39,13 @@
     font-size: .99em;
 }
 .info .department {
-  margin-top: 5px;
   color: #c0c5c5;
-    font-size: 1.5em;
+    font-size: 1.1em;
 
 }
 .department span{
     color: blueviolet;
-    font-size: 1.1em;
+    font-size: 0.87em;
 }
 .norecord{
   padding: 1em;
@@ -68,11 +61,18 @@ img:hover,span:hover,.username:hover{
   cursor: pointer;
 }
 
+.main-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 .info{
     min-width: 95px;
     display: inline-block;
-    padding:8px;
+}
+.info-right{
+    max-width: 160px;
 }
 .info div{
     padding: 5px;
@@ -90,4 +90,8 @@ iron-icon{
     color: #1b5e20;
     font-weight: bold;
     font-size: 1em;
+}
+
+.print{
+    color:#00acc1;
 }

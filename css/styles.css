@@ -72,13 +72,16 @@ gmc-logo{
 }
 
 .main-content{
+    overflow: hidden;
+    margin-bottom: 5px;
     padding-left: 10px;
 }
 page-footer{
     padding: 20px;
     background-color: #00c853;
 }
-
+.footer{
+}
 .norecord{
     padding: 1em;
     text-align: center;
